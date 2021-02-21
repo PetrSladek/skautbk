@@ -1,6 +1,6 @@
 import logo from "./logo/SKAUT_logo.svg";
 import {Unit} from "./Unit";
-import {useState} from 'react';
+import React, {useState} from 'react';
 
 export function List({units, troops, houses, onChangeLocation}) {
 
@@ -28,38 +28,25 @@ export function List({units, troops, houses, onChangeLocation}) {
 
                 {Object.keys(units).map((code) =>
                     <Unit
-                        // title={<>Srdce <small>na dlani</small></>}
+                        key={code}
                         title={units[code].name}
+                        color={units[code].color}
                         image={units[code].image}
-                        house={units[code].houses.map(house =>
-                            active === house
-                                ?
-                                <span style={{color: 'black'}}>{houses[house].name}</span>
-                                :
-                                <a href="" onClick={e => handleClickHouse(e, house)}>
-                                    {houses[house].name}
-                                </a>
+                        house={units[code].houses.map((house, inx) =>
+                            <a className={active === house && 'active'} key={inx} href="" onClick={e => handleClickHouse(e, house)}>
+                                {houses[house].name}
+                            </a>
                         )}
-                        units={Object.values(troops).filter(troop => troop.parent === code).map(troop =>
-                            active === troop.house
-                                ?
-                                <span style={{color: 'black'}}>{troop.number}</span>
-                                :
-                                <a href="" onClick={e => handleClickHouse(e, troop.house)}>
-                                    {troop.number}
-                                </a>
+                        units={Object.values(troops).filter(troop => troop.parent === code).map((troop, inx) =>
+                            <a className={active === troop.house && 'active'} key={inx} href="" onClick={e => handleClickHouse(e, troop.house)}>
+                                {troop.number}
+                            </a>
                         )}
-                    >
-                    </Unit>
+                    />
                 )}
                 {/*<div className="col-1">*/}
                 {/*    <strong style={{fontSize: "8em", opacity: 0.05}}>❯</strong>*/}
                 {/*</div>*/}
-            </div>
-            <div className="row">
-                <div className="offset-lg-4 col-lg-3  offset-sm-3 col-sm-6">
-                    <a className="btn btn-block btn-light btn-down" href="#map">↓ Najít nejbližší klubovnu ↓</a>
-                </div>
             </div>
         </div>
     </div>;

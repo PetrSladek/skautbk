@@ -9,12 +9,12 @@ export function Unit({
     image,
     units,
     house,
-    children,
+    color,
     ...props
 }) {
 
     return (
-        <div className="col-lg-3 col-sm-6 unit">
+        <div className={"col-lg-3 col-sm-6 unit color-" + color.substr(1)} style={{color: color}}>
             <h2>
                 <em>{prefix}</em><br/>
                 {title}
@@ -27,9 +27,6 @@ export function Unit({
                 <div>
                     <i className="bi bi-people-fill" /> <strong>Oddíly: </strong> {units.reduce((prev, curr) => [prev, ', ', curr])}
                 </div>
-                {/*<ul>
-                    {children}
-                </ul>*/}
             </div>
         </div>
     );
