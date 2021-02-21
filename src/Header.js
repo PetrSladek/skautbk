@@ -2,7 +2,7 @@ import logo from "./logo/SKAUT_logo.svg";
 import {Unit} from "./Unit";
 import React, {useState} from 'react';
 
-export function List({units, troops, houses, onChangeLocation}) {
+export function Header({units, troops, houses, onChangeLocation}) {
 
     const [active, setActive] = useState(null);
 
@@ -12,7 +12,7 @@ export function List({units, troops, houses, onChangeLocation}) {
         if (houses[house])
         {
             setActive(house);
-            onChangeLocation(houses[house].coords, 18);
+            onChangeLocation(houses[house].coords, 18, house);
         }
     }
 
@@ -22,24 +22,22 @@ export function List({units, troops, houses, onChangeLocation}) {
             <header>
                 <img src={logo} alt="Skaut" width="100"/>
                 <h1>Skaut Blansko </h1>
+                <hr />
             </header>
 
             <div className="row">
-
                 {Object.keys(units).map((code) =>
                     <Unit
                         key={code}
-                        title={units[code].name}
-                        color={units[code].color}
-                        image={units[code].image}
+                        {...units[code]}
                         house={units[code].houses.map((house, inx) =>
-                            <a className={active === house && 'active'} key={inx} href="" onClick={e => handleClickHouse(e, house)}>
+                            <a className={active === house ? 'active' : null} key={inx} href="" onClick={e => handleClickHouse(e, house)}>
                                 {houses[house].name}
                             </a>
                         )}
                         units={Object.values(troops).filter(troop => troop.parent === code).map((troop, inx) =>
-                            <a className={active === troop.house && 'active'} key={inx} href="" onClick={e => handleClickHouse(e, troop.house)}>
-                                {troop.number}
+                            <a className={active === troop.house ? 'active' : null} key={inx} href="" onClick={e => handleClickHouse(e, troop.house)}>
+                                {troop.number}{/*. oddíl*/}
                             </a>
                         )}
                     />

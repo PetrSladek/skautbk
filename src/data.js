@@ -43,31 +43,47 @@ export const data = {
             coords: [49.3426133, 16.6612411],
             image: null, // TODO
         },
+        'sloup': {
+            name: 'Sloup',
+            coords: [49.4151322, 16.7408294],
+            image: null, // TODO
+        },
+        'cernahora': {
+            name: 'Černá Hora',
+            longName: 'Centrum pro rodinu Veselá beruška, z.s.',
+            coords: [49.4125175, 16.5826606],
+            image: null, // TODO
+        }
     },
     units: {
         '621.01': {
             // name: 'Srdce na dlani',
             name: <>Srdce <small>na dlani</small></>,
-            web: null,
+            web: 'http://srdcenadlani.skauting.cz/',
             houses: ['ruzova3', 'palava', 'komenskeho15', 'klepacov'],
             color: '#cd2a00',
         },
         '621.07': {
             name: 'Světla',
-            web: null,
-            houses: ['ruzova5', 'ruzova7'],
+            web: 'http://skautbk.cz/',
+            houses: ['ruzova5', 'ruzova7', 'sloup', 'cernahora'],
             color: '#fcaf17',
-
         },
+        // '621.08': {
+        //     name: 'Ad Fontes',
+        //     web: null,
+        //     houses: [],
+        //     color: '#00d7be',
+        // },
         '621.09': {
             name: 'Fénix',
-            web: null,
+            web: 'http://3blansko.skauting.cz/',
             houses: ['palava'],
             color: '#3b71b1',
         },
         '621.10': {
-            name: 'Labirynt',
-            web: null,
+            name: 'Labyrint',
+            web: 'http://labyrint.skautbk.cz',
             houses: ['komenskeho13'],
             color: '#416426',
         },
