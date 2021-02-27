@@ -13,6 +13,8 @@ export function Header({units, troops, houses, onChangeLocation}) {
         {
             setActive(house);
             onChangeLocation(houses[house].coords, 18, house);
+            // TODO podle velikosti displeje
+            document.getElementById('units').scrollIntoView();
         }
     }
 
@@ -25,7 +27,7 @@ export function Header({units, troops, houses, onChangeLocation}) {
                 <hr />
             </header>
 
-            <div className="row">
+            <div id="units" className="row">
                 {Object.keys(units).map((code) =>
                     <Unit
                         key={code}
