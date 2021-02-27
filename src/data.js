@@ -1,58 +1,77 @@
 import urlPalava from "./klubovny/palava.jpg";
 import urlRuzova3 from "./klubovny/ruzova3.jpg";
 import urlRuzova5 from "./klubovny/ruzova5.jpg";
+import urlRuzova7 from "./klubovny/ruzova7.jpg";
 import urlKomenskeho13 from "./klubovny/komenskeho.jpg";
+import urlStaraFara from "./klubovny/starafara.jpg";
+import urlKaplankaSloup from "./klubovny/kaplankasloup.jpg";
+import urlCentrumBeruska from "./klubovny/centrumberuska.jpg";
+import urlKlepacov from "./klubovny/klepacov.jpg";
 
 export const data = {
     houses: { // Klubovny
         'palava': {
             name: 'Palava',
-            longName: 'Palava (Blansko ev. č. 1883)',
+            longName: 'Klubovna na Palavě',
+            address: 'ev. č. 1883, 678 01 Blansko',
             coords: [49.3682283, 16.6583092],
             image: urlPalava,
         },
         'ruzova3': {
             name: 'Růžová 3',
+            longName: 'Klubovna na Růžové 3',
+            address: 'Růžová 3, 678 01 Blansko',
             coords: [49.3646756, 16.6454031],
             image: urlRuzova3,
         },
         'ruzova5': {
             name: 'Růžová 5',
+            longName: 'Klubovna na Růžové 5',
+            address: 'Růžová 5, 678 01 Blansko',
             coords: [49.3645531, 16.6454075],
             image: urlRuzova5,
         },
         'ruzova7': {
             name: 'Růžová 7',
+            longName: 'Klubovna na Růžové 7',
+            address: 'Růžová 7, 678 01 Blansko',
             coords: [49.3644675, 16.6454942],
-            image: urlRuzova5, // TODO
+            image: urlRuzova7,
         },
         'komenskeho13': {
             name: 'Komenského 13',
+            longName: 'Klubovna na Komenského 13',
+            address: 'Komenského 13, 678 01 Blansko',
             coords: [49.3597722, 16.6388450],
             image: urlKomenskeho13,
         },
-        'komenskeho15': {
-            name: 'Katolický dům',
-            longName: 'Komenského 15 (Katolický dům)',
-            coords: [49.3596828, 16.6386614],
-            image: urlKomenskeho13, // TODO
+        'starafara': {
+            name: 'Stará fara',
+            longName: 'Klubovna na Staré faře',
+            address: 'Komenského 48/14, 678 01 Blansko',
+            coords: [49.3599281, 16.6382375],
+            image: urlStaraFara,
         },
         'klepacov': {
             name: 'Klepačov',
-            longName: 'Dlouhá 167, Klepačov',
+            longName: 'Klubovna na Klepačově',
+            address: 'Dlouhá 167, Klepačov',
             coords: [49.3426133, 16.6612411],
-            image: null, // TODO
+            image: urlKlepacov,
         },
         'sloup': {
             name: 'Sloup',
-            coords: [49.4151322, 16.7408294],
-            image: null, // TODO
+            longName: 'Klubovna Kaplanka ve Sloupě',
+            address: 'Kaplanka, Sloup 4, 679 13 Sloup',
+            coords: [49.4151156, 16.7408200],
+            image: urlKaplankaSloup,
         },
         'cernahora': {
             name: 'Černá Hora',
-            longName: 'Centrum pro rodinu Veselá beruška, z.s.',
+            longName: 'Klubovna v Černé Hoře',
+            address: 'Centrum pro rodinu Veselá beruška, z.s., Budovatelská 282, 67921 Černá Hora',
             coords: [49.4125175, 16.5826606],
-            image: null, // TODO
+            image: urlCentrumBeruska,
         }
     },
     units: {
@@ -60,7 +79,7 @@ export const data = {
             // name: 'Srdce na dlani',
             name: <>Srdce <small>na dlani</small></>,
             web: 'http://srdcenadlani.skauting.cz/',
-            houses: ['ruzova3', 'palava', 'komenskeho15', 'klepacov'],
+            houses: ['ruzova3', 'palava', 'starafara', 'klepacov'],
             color: '#cd2a00',
         },
         '621.07': {
@@ -149,7 +168,7 @@ export const data = {
             parent: '621.01',
             number: 9,
             name: '9. oddíl Cesta',
-            house: 'komenskeho15',
+            house: 'starafara',
             web: null,
         },
         '10oddil': {
@@ -185,14 +204,14 @@ export const data = {
             number: 14,
             name: '14. oddíl Úsvit (Sloup)',
             house: 'sloup',
-            web: null,
+            web: 'https://www.mestyssloup.cz/udalosti/spolky-1/14-skautsky-oddil-usvit/',
         },
         '15oddil': {
             parent: '621.07',
             number: 15,
             name: '15. oddíl Kasiopeja (ČH)',
             house: 'cernahora',
-            web: null,
+            web: 'https://cernahora.skauting.cz/',
         },
         '16oddil': {
             parent: '621.07',

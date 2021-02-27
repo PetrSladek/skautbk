@@ -14,7 +14,7 @@ export function Header({units, troops, houses, onChangeLocation}) {
             setActive(house);
             onChangeLocation(houses[house].coords, 18, house);
             // TODO podle velikosti displeje
-            document.getElementById('units').scrollIntoView();
+            document.getElementById('units').scrollIntoView({behavior: 'smooth'});
         }
     }
 

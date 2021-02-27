@@ -1,5 +1,5 @@
 import './App.scss';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {MapContainer, Marker, Popup, TileLayer} from 'react-leaflet'
 import {Header} from "./Header";
 import {data} from './data';
@@ -92,6 +92,35 @@ function App() {
         map.locate();
     }
 
+    const handleOnLoad = () => {
+        const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+        const unitsHeight = document.getElementById('units').clientHeight;
+        const headerHeight = document.getElementById('header').clientHeight;
+
+        console.log("vh", vh, "header", headerHeight, "vh-header", vh-headerHeight,  "units", unitsHeight, "vh-units-16", vh-unitsHeight-16);
+
+        // chci aby mapa měla alespon 568px
+        if (vh - headerHeight >= 568)
+        {
+            document.getElementById('map').style.height = (vh - headerHeight - 16) + "px";
+        }
+        else if (vh - unitsHeight - 16 >= 568)
+        {
+            document.getElementById('map').style.height = (vh - unitsHeight - 16) + "px";
+        }
+
+        // vzhozi veliksot je 80% vh
+    };
+
+    useEffect(() => {
+        window.addEventListener('load', handleOnLoad);
+        window.addEventListener('resize', handleOnLoad);
+        // returned function will be called on component unmount
+        return () => {
+            window.removeEventListener('load', handleOnLoad)
+            window.removeEventListener('resize', handleOnLoad)
+        }
+    }, [])
 
     return (
         <div id="app">
