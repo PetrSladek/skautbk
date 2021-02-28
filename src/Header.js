@@ -9,9 +9,8 @@ export function Header({activeHouse, units, troops, houses, onClickHouse}) {
             <header>
                 <img src={logo} alt="Skaut" width="100"/>
                 <h1>Skaut Blansko </h1>
-                <hr />
             </header>
-
+            <hr />
             <div id="units" className="row">
                 {Object.keys(units).map((code) =>
                     <Unit

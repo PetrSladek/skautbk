@@ -9,9 +9,13 @@ import {HousePopup} from "./HousePopup";
 let refs = {};
 let map = null;
 
+let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+let vw = Math.max(document.documentElement.clientWidth || 0, window.clientWidth || 0);
+
 function App() {
 
-    const defaultCoords = [49.3656989, 16.6404402];
+    // const defaultCoords = [49.3656989, 16.6404402];
+    const defaultCoords = [49.3556756, 16.6454032];
     const defaultZoom = 14;
 
     const [activeHouse, setActiveHouse] = useState(null);
@@ -36,17 +40,19 @@ function App() {
 
                 console.log(refs, house);
 
+                // map.panBy([0,-100]);
                 refs[house].openPopup();
                 map.off('zoomend');
             });
 
             // doscrolujeme na přehled středisek
             // TODO na mobilu to asi nehceme
-            document.getElementById('units').scrollIntoView({behavior: 'smooth'});
+
+            document.getElementById(vh >= 992 ? 'units' : 'map').scrollIntoView({behavior: 'smooth'});
         }
     };
 
-    const handleReset = () => map && map.flyTo(defaultCoords, defaultZoom);
+    const handleReset = () => map && map.flyTo(defaultCoords, defaultZoom) && setActiveHouse(null);
     const handleFindNearby = () => {
         if (!map)
         {
@@ -77,21 +83,21 @@ function App() {
     }
 
     const handleOnLoad = () => {
-        const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+        vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+        vw = Math.max(document.documentElement.clientWidth || 0, window.clientWidth || 0);
+
         const unitsHeight = document.getElementById('units').clientHeight;
         const headerHeight = document.getElementById('header').clientHeight;
 
-        console.log("vh", vh, "header", headerHeight, "vh-header", vh-headerHeight,  "units", unitsHeight, "vh-units-16", vh-unitsHeight-16);
+        console.log("vh", vh, 'vw', vw,"header", headerHeight, "vh-header", vh-headerHeight,  "units", unitsHeight, "vh-units", vh-unitsHeight);
 
-        // chci aby mapa měla alespon 568px
-        if (vh - headerHeight >= 568)
+
+        // // chci aby mapa měla alespon 568px
+        if (vw > 1024)
         {
-            document.getElementById('map').style.height = (vh - headerHeight - 16) + "px";
+            document.getElementById('map').style.height = (vh - headerHeight) + "px";
         }
-        else if (vh - unitsHeight - 16 >= 568)
-        {
-            document.getElementById('map').style.height = (vh - unitsHeight - 16) + "px";
-        }
+
 
         // vzhozi veliksot je 80% vh
     };
@@ -135,9 +141,20 @@ function App() {
                 />
 
                 {Object.keys(data.houses).map((key) =>
-                    <Marker key={key} position={data.houses[key].coords} ref={ref => refs[key] = ref}>
+                    <Marker
+                        key={key}
+                        position={data.houses[key].coords}
+                        ref={ref => refs[key] = ref}
+                        eventHandlers={{
+                            click: (e) => {
+                                console.log('marker clicked', e);
+                                handleClickHouse(e.originalEvent, key);
+                            },
+                        }}
+                    >
                         <HousePopup
                             {...data.houses[key]}
+                            vw={vw}
                             troops={Object.values(data.troops).filter(troop => troop.house === key)}
                             units={Object.values(data.units).filter(unit => unit.houses.includes(key))}
                         />
