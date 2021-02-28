@@ -113,3 +113,18 @@ body {
         background: rgba(255,255,255, 0.8);
     }
 }
+
+.house-popup {
+    font-size: 1rem;
+    font-family: themix;
+
+    h3 {
+        font-size: 1.5em;
+        font-family: skautbold;
+    }
+    h3 + address
+    {
+        font-size: 1em;
+        margin-top: -0.2em;
+    }
+}

@@ -1,22 +1,7 @@
 import logo from "./logo/SKAUT_logo.svg";
 import {Unit} from "./Unit";
-import React, {useState} from 'react';
 
-export function Header({units, troops, houses, onChangeLocation}) {
-
-    const [active, setActive] = useState(null);
-
-    function handleClickHouse(e, house)
-    {
-        e.preventDefault();
-        if (houses[house])
-        {
-            setActive(house);
-            onChangeLocation(houses[house].coords, 18, house);
-            // TODO podle velikosti displeje
-            document.getElementById('units').scrollIntoView({behavior: 'smooth'});
-        }
-    }
+export function Header({activeHouse, units, troops, houses, onClickHouse}) {
 
     return <div id="header">
         <div className="container">
@@ -33,12 +18,12 @@ export function Header({units, troops, houses, onChangeLocation}) {
                         key={code}
                         {...units[code]}
                         house={units[code].houses.map((house, inx) =>
-                            <a className={active === house ? 'active' : null} key={inx} href="" onClick={e => handleClickHouse(e, house)}>
+                            <a className={activeHouse === house ? 'active' : null} key={inx} href="" onClick={e => onClickHouse(e, house)}>
                                 {houses[house].name}
                             </a>
                         )}
                         units={Object.values(troops).filter(troop => troop.parent === code).map((troop, inx) =>
-                            <a className={active === troop.house ? 'active' : null} key={inx} href="" onClick={e => handleClickHouse(e, troop.house)}>
+                            <a className={activeHouse === troop.house ? 'active' : null} key={inx} href="" onClick={e => onClickHouse(e, troop.house)}>
                                 {troop.number}{/*. oddíl*/}
                             </a>
                         )}

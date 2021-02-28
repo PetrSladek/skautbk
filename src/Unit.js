@@ -3,6 +3,7 @@
 export function Unit({
     prefix = "Středisko",
     name,
+    title,
     image,
     units,
     house,
@@ -14,7 +15,7 @@ export function Unit({
         <div className={"col-lg-3 col-sm-6 unit color-" + color.substr(1)} style={{color: color}}>
             <h2>
                 <em>{prefix}</em><br/>
-                {name}
+                {title || name}
             </h2>
 
             <div className="content">
