@@ -10,7 +10,7 @@ const SHAPES = [SHAPE_1, SHAPE_2, SHAPE_3, SHAPE_4];
 export function HousePopup({vw, name, longName, address, image, troops, units}) {
 
     // const random = Math.floor(Math.random() * TVARY.length);
-    const props = vw <= 666 ? {maxWidth: vw-40} : {minWidth: 666};
+    const props = vw <= 666 ? {maxWidth: vw-60, autoPanPadding: [10,80]} : {minWidth: 666, autoPanPadding: [50,50]};
 
     /*
       autoPan?: boolean;
@@ -19,7 +19,7 @@ export function HousePopup({vw, name, longName, address, image, troops, units}) 
     autoPanPadding?: PointExpression;
      */
 
-    return <Popup {...props} autoPan={true} autoPanPadding={[0,50]} >
+    return <Popup autoPan={true} {...props}>
         <div className="house-popup">
             <div className="row">
                 <div className="col-md-6">

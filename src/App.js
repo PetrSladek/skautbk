@@ -48,7 +48,10 @@ function App() {
             // doscrolujeme na přehled středisek
             // TODO na mobilu to asi nehceme
 
-            document.getElementById(vh >= 992 ? 'units' : 'map').scrollIntoView({behavior: 'smooth'});
+            if (vw < 576)
+            {
+                document.getElementById('map').scrollIntoView({behavior: 'smooth'});
+            }
         }
     };
 
@@ -93,7 +96,7 @@ function App() {
 
 
         // // chci aby mapa měla alespon 568px
-        if (vw > 1024)
+        if (vw >= 576)
         {
             document.getElementById('map').style.height = (vh - headerHeight) + "px";
         }
