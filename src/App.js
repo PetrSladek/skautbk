@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react';
 import {MapContainer, Marker, TileLayer} from 'react-leaflet'
 import {Header} from "./Header";
 import {data} from './data';
-import {Events} from "./Events";
+import {Banners} from "./Banners";
 import {HousePopup} from "./HousePopup";
 
 let refs = {};
@@ -110,8 +110,8 @@ function App() {
         window.addEventListener('resize', handleOnLoad);
         // returned function will be called on component unmount
         return () => {
-            window.removeEventListener('load', handleOnLoad)
-            window.removeEventListener('resize', handleOnLoad)
+            window.removeEventListener('load', handleOnLoad);
+            window.removeEventListener('resize', handleOnLoad);
         }
     }, [])
 
@@ -190,7 +190,7 @@ function App() {
 
             </MapContainer>
 
-            <Events />
+            <Banners banners={data.banners} />
 
         </div>
     );

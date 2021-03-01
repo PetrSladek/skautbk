@@ -8,6 +8,9 @@ import urlKaplankaSloup from "./klubovny/kaplankasloup.jpg";
 import urlCentrumBeruska from "./klubovny/centrumberuska.jpg";
 import urlKlepacov from "./klubovny/klepacov.jpg";
 
+import urlPomahameBlansku from "./banners/pomahame-blansku.png";
+import urlSkautskeStoleti from "./banners/skautske-stolet-blansko.png";
+
 export const data = {
     houses: { // Klubovny
         'palava': {
@@ -233,5 +236,32 @@ export const data = {
             web: null,
         },
 
-    }
+    },
+    banners: [
+        {
+            image: urlSkautskeStoleti,
+            width: 600,
+            height: 200,
+            url: 'http://blansko.skauting.cz/',
+        },
+        {
+            image: urlPomahameBlansku,
+            width: 600,
+            height: 200,
+            url: 'http://www.pomahameblansku.cz/',
+        },
+        // {
+        //     image: urlSkautskeStoleti,
+        //     width: 600,
+        //     height: 200,
+        //     url: 'http://blansko.skauting.cz/',
+        // },
+        // {
+        //     image: urlPomahameBlansku,
+        //     width: 600,
+        //     height: 200,
+        //     url: 'http://www.pomahameblansku.cz/',
+        // },
+
+    ],
 }
