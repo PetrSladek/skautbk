@@ -89,16 +89,22 @@ function App() {
         vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
         vw = Math.max(document.documentElement.clientWidth || 0, window.clientWidth || 0);
 
-        const unitsHeight = document.getElementById('units').clientHeight;
         const headerHeight = document.getElementById('header').clientHeight;
 
-        console.log("vh", vh, 'vw', vw,"header", headerHeight, "vh-header", vh-headerHeight,  "units", unitsHeight, "vh-units", vh-unitsHeight);
+        console.log("vh", vh, 'vw', vw,"header", headerHeight, "vh-header", vh-headerHeight);
 
 
-        // // chci aby mapa měla alespon 568px
+
         if (vw >= 576)
         {
-            document.getElementById('map').style.height = (vh - headerHeight) + "px";
+            if (headerHeight > 0.6 * vh)
+            {
+                document.getElementById('map').style.height = "60vh";
+            }
+            else
+                {
+                document.getElementById('map').style.height = (vh - headerHeight) + "px";
+            }
         }
 
 

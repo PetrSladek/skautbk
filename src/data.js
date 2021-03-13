@@ -5,7 +5,8 @@ import urlRuzova7 from "./klubovny/ruzova7.jpg";
 import urlKomenskeho13 from "./klubovny/komenskeho.jpg";
 import urlStaraFara from "./klubovny/starafara.jpg";
 import urlKaplankaSloup from "./klubovny/kaplankasloup.jpg";
-import urlCentrumBeruska from "./klubovny/centrumberuska.jpg";
+// import urlCentrumBeruska from "./klubovny/centrumberuska.jpg";
+import urlKoupalisteCernaHora from "./klubovny/koupalistecernahora.jpg";
 import urlKlepacov from "./klubovny/klepacov.jpg";
 
 import urlPomahameBlansku from "./banners/pomahame-blansku.png";
@@ -72,9 +73,9 @@ export const data = {
         'cernahora': {
             name: 'Černá Hora',
             longName: 'Klubovna v Černé Hoře',
-            address: 'Centrum pro rodinu Veselá beruška, z.s., Budovatelská 282, 67921 Černá Hora',
-            coords: [49.4125175, 16.5826606],
-            image: urlCentrumBeruska,
+            address: 'Koupaliště, Potoční ev. č. 147, 679 21 Černá Hora',
+            coords: [49.4124750, 16.5875931],
+            image: urlKoupalisteCernaHora,
         }
     },
     units: {
@@ -177,7 +178,7 @@ export const data = {
             number: 9,
             name: '9. oddíl Cesta',
             house: 'starafara',
-            web: null,
+            web: 'http://9oddil.skauting.cz/',
         },
         '10oddil': {
             parent: '621.10',
