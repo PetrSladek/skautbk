@@ -81,7 +81,7 @@ export const data = {
     units: {
         '621.01': {
             name: 'Srdce na dlani',
-            title: <>Srdce <small>na dlani</small></>,
+            // title: <>Srdce <small>na dlani</small></>,
             web: 'http://srdcenadlani.skauting.cz/',
             id: '621.01',
             houses: ['ruzova3', 'palava', 'starafara', 'klepacov'],
