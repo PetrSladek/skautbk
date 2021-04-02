@@ -3,6 +3,7 @@ import urlRuzova3 from "./klubovny/ruzova3.jpg";
 import urlRuzova5 from "./klubovny/ruzova5.jpg";
 import urlRuzova7 from "./klubovny/ruzova7.jpg";
 import urlKomenskeho13 from "./klubovny/komenskeho.jpg";
+import urlKatolickyDum from "./klubovny/katolickydum.jpg";
 import urlStaraFara from "./klubovny/starafara.jpg";
 import urlKaplankaSloup from "./klubovny/kaplankasloup.jpg";
 // import urlCentrumBeruska from "./klubovny/centrumberuska.jpg";
@@ -56,6 +57,13 @@ export const data = {
             coords: [49.3599281, 16.6382375],
             image: urlStaraFara,
         },
+        'katolickydum': {
+            name: 'Katolický dům',
+            longName: 'Klubocna v Katolickém domě',
+            address: 'Komenského 15, 678 01 Blansko',
+            coords: [49.3596828, 16.6386614],
+            image: urlKatolickyDum,
+        },
         'klepacov': {
             name: 'Klepačov',
             longName: 'Klubovna na Klepačově',
@@ -84,7 +92,7 @@ export const data = {
             // title: <>Srdce <small>na dlani</small></>,
             web: 'http://srdcenadlani.skauting.cz/',
             id: '621.01',
-            houses: ['ruzova3', 'palava', 'starafara', 'klepacov'],
+            houses: ['ruzova3', 'palava', 'katolickydum', 'klepacov'],
             color: '#cd2a00',
         },
         '621.07': {
@@ -177,7 +185,7 @@ export const data = {
             parent: '621.01',
             number: 9,
             name: '9. oddíl Cesta',
-            house: 'starafara',
+            house: 'katolickydum',
             web: 'http://9oddil.skauting.cz/',
         },
         '10oddil': {
