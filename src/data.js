@@ -59,7 +59,7 @@ export const data = {
         },
         'katolickydum': {
             name: 'Katolický dům',
-            longName: 'Klubocna v Katolickém domě',
+            longName: 'Klubovna v Katolickém domě',
             address: 'Komenského 15, 678 01 Blansko',
             coords: [49.3596828, 16.6386614],
             image: urlKatolickyDum,
