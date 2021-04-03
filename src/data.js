@@ -18,7 +18,7 @@ export const data = {
         'palava': {
             name: 'Palava',
             longName: 'Klubovna Na Palavě',
-            address: 'ev. č. 1883, 678 01 Blansko',
+            address: 'č. ev. 1883, 678 01 Blansko',
             coords: [49.3682283, 16.6583092],
             image: urlPalava,
         },
@@ -50,13 +50,13 @@ export const data = {
             coords: [49.3597722, 16.6388450],
             image: urlKomenskeho13,
         },
-        'starafara': {
-            name: 'Stará fara',
-            longName: 'Klubovna na Staré faře',
-            address: 'Komenského 48/14, 678 01 Blansko',
-            coords: [49.3599281, 16.6382375],
-            image: urlStaraFara,
-        },
+        // 'starafara': {
+        //     name: 'Stará fara',
+        //     longName: 'Klubovna na Staré faře',
+        //     address: 'Komenského 48/14, 678 01 Blansko',
+        //     coords: [49.3599281, 16.6382375],
+        //     image: urlStaraFara,
+        // },
         'katolickydum': {
             name: 'Katolický dům',
             longName: 'Klubovna v Katolickém domě',
@@ -92,7 +92,7 @@ export const data = {
             // title: <>Srdce <small>na dlani</small></>,
             web: 'http://srdcenadlani.skauting.cz/',
             id: '621.01',
-            houses: ['ruzova3', 'palava', 'katolickydum', 'klepacov'],
+            houses: ['ruzova3', 'katolickydum', 'klepacov'],
             color: '#cd2a00',
         },
         '621.07': {
@@ -136,7 +136,7 @@ export const data = {
             parent: '621.01',
             number: 2,
             name: '2. oddíl',
-            house: 'palava',
+            house: 'ruzova3',
             web: null,
         },
         '3oddil': {
@@ -157,7 +157,7 @@ export const data = {
             parent: '621.01',
             number: 5,
             name: '5. oddíl',
-            house: 'palava',
+            house: 'ruzova3',
             web: null,
         },
         '6oddil': {
