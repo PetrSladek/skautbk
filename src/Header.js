@@ -14,9 +14,10 @@ export function Header({activeHouse, units, troops, houses, onClickHouse}) {
             <hr />
         <div className="container">
             <div id="units" className="row">
-                {Object.keys(units).map((code) =>
+                {Object.keys(units).map((code, index) =>
                     <Unit
                         key={code}
+                        showLine={index+1 !== Object.keys(units).length}
                         {...units[code]}
                         house={units[code].houses.map((house, inx) =>
                             <a className={activeHouse === house ? 'active' : null} key={inx} href="" onClick={e => onClickHouse(e, house)}>

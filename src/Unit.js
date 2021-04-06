@@ -9,6 +9,7 @@ export function Unit({
     house,
     color,
     web,
+    showLine = false,
     ...props
 }) {
     return (
@@ -46,6 +47,8 @@ export function Unit({
                     {units.length > 0 && units.reduce((prev, curr, index) => [prev, <span key={'troop' + index+1} className="delimiter"> | </span>, curr])}
                 </div>
             </div>
+
+            {showLine && <hr className="d-block d-sm-none" />}
         </div>
     );
 }

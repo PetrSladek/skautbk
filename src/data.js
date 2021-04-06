@@ -98,7 +98,7 @@ export const data = {
         '621.07': {
             id: '621.07',
             name: 'Světla',
-            web: 'http://skautbk.cz/',
+            web: 'http://svetla.skautbk.cz/',
             houses: ['ruzova5', 'ruzova7', 'sloup', 'cernahora'],
             color: '#fcaf17',
         },
