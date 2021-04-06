@@ -5,6 +5,7 @@ import urlRuzova7 from "./klubovny/ruzova7.jpg";
 import urlKomenskeho13 from "./klubovny/komenskeho.jpg";
 import urlKatolickyDum from "./klubovny/katolickydum.jpg";
 import urlStaraFara from "./klubovny/starafara.jpg";
+import urlAdamov from "./klubovny/adamov.jpg";
 import urlKaplankaSloup from "./klubovny/kaplankasloup.jpg";
 // import urlCentrumBeruska from "./klubovny/centrumberuska.jpg";
 import urlKoupalisteCernaHora from "./klubovny/koupalistecernahora.jpg";
@@ -84,7 +85,14 @@ export const data = {
             address: 'Koupaliště, Potoční ev. č. 147, 679 21 Černá Hora',
             coords: [49.4124750, 16.5875931],
             image: urlKoupalisteCernaHora,
-        }
+        },
+        'adamov': {
+            name: 'adamov',
+            longName: 'Klubovna Adamov',
+            address: 'Mírová 2, 679 04 Adamov',
+            coords: [49.3030592, 16.6506717],
+            image: urlAdamov,
+        },
     },
     units: {
         '621.01': {
@@ -92,7 +100,7 @@ export const data = {
             // title: <>Srdce <small>na dlani</small></>,
             web: 'http://srdcenadlani.skauting.cz/',
             id: '621.01',
-            houses: ['ruzova3', 'katolickydum', 'klepacov'],
+            houses: ['ruzova3', 'katolickydum', 'klepacov', 'adamov'],
             color: '#cd2a00',
         },
         '621.07': {
@@ -149,9 +157,9 @@ export const data = {
         '4oddil': {
             parent: '621.01',
             number: 4,
-            name: '4. oddíl',
-            house: 'ruzova3',
-            web: null,
+            name: '4. oddíl Šedé Sovy Adamov',
+            house: 'adamov',
+            web: 'https://skauti-adamov.webnode.cz/',
         },
         '5oddil': {
             parent: '621.01',
