@@ -178,7 +178,7 @@ export const data = {
         '7oddil': {
             parent: '621.09',
             number: 7,
-            name: '7. oddíl Opicky',
+            name: '7. oddíl Opičky',
             house: 'palava',
             web: null,
         },
