@@ -87,7 +87,7 @@ export const data = {
             image: urlKoupalisteCernaHora,
         },
         'adamov': {
-            name: 'adamov',
+            name: 'Adamov',
             longName: 'Klubovna Adamov',
             address: 'Mírová 2, 679 04 Adamov',
             coords: [49.3030592, 16.6506717],
@@ -157,7 +157,7 @@ export const data = {
         '4oddil': {
             parent: '621.01',
             number: 4,
-            name: '4. oddíl Šedé Sovy Adamov',
+            name: '4. oddíl Šedé sovy Adamov',
             house: 'adamov',
             web: 'https://skauti-adamov.webnode.cz/',
         },
