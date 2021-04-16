@@ -17,6 +17,7 @@ export function Header({activeHouse, units, troops, houses, onClickHouse}) {
                 {Object.keys(units).map((code, index) =>
                     <Unit
                         key={code}
+                        number={code}
                         showLine={index+1 !== Object.keys(units).length}
                         {...units[code]}
                         house={units[code].houses.map((house, inx) =>

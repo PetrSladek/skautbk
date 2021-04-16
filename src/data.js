@@ -120,7 +120,7 @@ export const data = {
         '621.09': {
             id: '621.09',
             name: 'Fénix',
-            web: 'http://3blansko.skauting.cz/',
+            web: 'https://fenix.skauting.cz',
             houses: ['palava'],
             color: '#3b71b1',
         },

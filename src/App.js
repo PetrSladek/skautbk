@@ -137,7 +137,7 @@ function App() {
                 center={defaultCoords}
                 zoom={defaultZoom}
                 scrollWheelZoom={false}
-                zoomControl={true}
+                zoomControl={false}
                 doubleClickZoom={false}
                 dragging={false}
             >
