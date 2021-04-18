@@ -136,10 +136,12 @@ function App() {
                 whenCreated={createdMap => map = createdMap}
                 center={defaultCoords}
                 zoom={defaultZoom}
+                zoomControl={true}
+                // zoomControl={false}
                 scrollWheelZoom={false}
-                zoomControl={false}
                 doubleClickZoom={false}
                 dragging={false}
+                tap={false}
             >
 
                 <TileLayer
