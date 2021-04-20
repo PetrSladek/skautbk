@@ -98,7 +98,7 @@ export const data = {
         '621.01': {
             name: 'Srdce na dlani',
             // title: <>Srdce <small>na dlani</small></>,
-            web: 'http://srdcenadlani.skauting.cz/',
+            web: 'http://srdcenadlani.skautbk.cz/',
             id: '621.01',
             houses: ['ruzova3', 'katolickydum', 'klepacov', 'adamov'],
             color: '#cd2a00',
@@ -120,7 +120,7 @@ export const data = {
         '621.09': {
             id: '621.09',
             name: 'Fénix',
-            web: 'https://fenix.skauting.cz',
+            web: 'http://fenix.skautbk.cz',
             houses: ['palava'],
             color: '#3b71b1',
         },
