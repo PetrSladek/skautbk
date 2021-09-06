@@ -13,6 +13,7 @@ import urlKlepacov from "./klubovny/klepacov.jpg";
 
 import urlPomahameBlansku from "./banners/pomahame-blansku.png";
 import urlSkautskeStoleti from "./banners/skautske-stolet-blansko.png";
+import urlPlakat100let from "./banners/plakat100let.png";
 
 export const data = {
     houses: { // Klubovny
@@ -255,6 +256,12 @@ export const data = {
 
     },
     banners: [
+        {
+            image: urlPlakat100let,
+            width: 600,
+            height: 200,
+            url: 'https://svetla.skautbk.cz/2021/08/oslavy-100-let-od-zalozeni-skautingu-v-blansku/',
+        },
         {
             image: urlSkautskeStoleti,
             width: 600,
