@@ -246,6 +246,13 @@ export const data = {
             house: 'ruzova5',
             web: null,
         },
+        '19oddil': {
+            parent: '621.01',
+            number: 19,
+            name: '19. oddíl Cesťička',
+            house: 'katolickydum',
+            web: null,
+        },
         '20oddil': {
             parent: '621.10',
             number: 20,
